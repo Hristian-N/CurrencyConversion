@@ -30,7 +30,7 @@ def is_valid_amount(number):
     except (ValueError, InvalidOperation):
         return False
 
-def get_currencies(currency_code):
+def get_currencies():
     endpoint = f'{BASE_URL}/currencies'
     params = {
         'api_key': API_KEY
