@@ -57,8 +57,6 @@ def is_currency_present():
 
 def convert(base_currency_code, target_currency_code):
     if base_currency_code in cache and target_currency_code in cache[base_currency_code]['results']:
-        print(f"Using cached data for {base_currency_code} to {target_currency_code}")
-        print(cache)
         return cache[base_currency_code]
 
     endpoint = f'{BASE_URL}/time-series'
